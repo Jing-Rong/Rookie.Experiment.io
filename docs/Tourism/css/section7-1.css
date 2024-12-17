@@ -286,7 +286,7 @@ br {
   .four .photo1 {
     /* border: #79b95a 2px solid; */
     display: flex;
-    margin-top: 4s%;
+    margin-top: 5%;
   }
   .four .photo1 .item {
     width: 50%;
