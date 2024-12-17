@@ -4,7 +4,7 @@ const imgElement = document.getElementById("dialog1-1");
 imgElement.addEventListener("mouseover", () => {
   imgElement.style.animationPlayState = "paused"; // 停止動畫
   imgElement.style.opacity = "0"; // 先將圖片變透明
-  imgElement.src = "webimg/dialog1-1-0.svg";
+  imgElement.src = "../webimg/dialog1-1-0.svg";
   imgElement.style.opacity = "1"; // 恢復不透明度，顯示新圖片
 });
 
@@ -12,7 +12,7 @@ imgElement.addEventListener("mouseout", () => {
   imgElement.style.animationPlayState = "running"; // 恢復動畫
   imgElement.style.opacity = "0"; // 先將圖片變透明
 
-  imgElement.src = "webimg/dialog1-1.svg";
+  imgElement.src = "../webimg/dialog1-1.svg";
   imgElement.style.opacity = "1"; // 恢復不透明度，顯示新圖片
 });
 
