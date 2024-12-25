@@ -5,12 +5,11 @@
 }
 
 .three .next{
-  /* border: #c74343 2px solid; */
+  /* border: #000 2px solid; */
+  height: 4%;
   position: absolute;
-  margin-bottom: 0px;
-  width: auto;
-  bottom: 4px;
-  right: 8px;
+  bottom: 1%;
+  right: 0px;
   z-index: 20;
 }
 
