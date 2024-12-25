@@ -99,13 +99,13 @@
   }
   
   .three .next{
-    /* border: #000 2px solid; */
-    height: 4%;
-    position: absolute;
-    bottom: 1%;
-    right: 0px;
-    z-index: 20;
-  }
+  /* border: #000 2px solid; */
+  height: 4%;
+  position: absolute;
+  bottom: 1%;
+  right: 0px;
+  z-index: 20;
+}
   
   
   /* 電腦版!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
