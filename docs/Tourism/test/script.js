@@ -28,123 +28,123 @@ var userChoices = {
 
 
       if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'a' && userChoices.question4 === 'a' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+        resultImageSrc  = '../webimg/test/Frole.png';
 
       } else if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'b' && userChoices.question4 === 'a' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
 
       } else if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'c' && userChoices.question4 === 'a' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+        resultImageSrc  = '../webimg/test/Frole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'a' && userChoices.question4 === 'b' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+        resultImageSrc  = '../webimg/test/Frole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'a' && userChoices.question4 === 'b' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+        resultImageSrc  = '../webimg/test/Frole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'a' && userChoices.question4 === 'a' && userChoices.question5 === 'b') {
-         resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+         resultImageSrc  = '../webimg/test/Brole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'b' && userChoices.question4 === 'a' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+        resultImageSrc  = '../webimg/test/Brole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'b' && userChoices.question4 === 'b' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+        resultImageSrc  = '../webimg/test/Brole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'b' && userChoices.question4 === 'b' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+        resultImageSrc  = '../webimg/test/Frole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'c' && userChoices.question4 === 'a' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+        resultImageSrc  = '../webimg/test/Brole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'c' && userChoices.question4 === 'b' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+        resultImageSrc  = '../webimg/test/Frole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'a' && userChoices.question3 === 'c' && userChoices.question4 === 'b' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+        resultImageSrc  = '../webimg/test/Frole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'b' && userChoices.question3 === 'a' && userChoices.question4 === 'a' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+        resultImageSrc  = '../webimg/test/Brole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'b' && userChoices.question3 === 'a' && userChoices.question4 === 'b' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+        resultImageSrc  = '../webimg/test/Frole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'b' && userChoices.question3 === 'a' && userChoices.question4 === 'b' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+        resultImageSrc  = '../webimg/test/Brole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'b' && userChoices.question3 === 'a' && userChoices.question4 === 'a' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'b' && userChoices.question3 === 'b' && userChoices.question4 === 'a' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
         
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'b' && userChoices.question3 === 'b' && userChoices.question4 === 'a' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Srole.svg';
+        resultImageSrc  = '../webimg/test/Srole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'b' && userChoices.question3 === 'b' && userChoices.question4 === 'b' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+        resultImageSrc  = '../webimg/test/Brole.png';
 
       }else if (userChoices.question1 === 'a' && userChoices.question2 === 'b' && userChoices.question3 === 'b' && userChoices.question4 === 'b' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'a' && userChoices.question3 === 'a' && userChoices.question4 === 'a' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+        resultImageSrc  = '../webimg/test/Brole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'a' && userChoices.question3 === 'a' && userChoices.question4 === 'a' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+        resultImageSrc  = '../webimg/test/Frole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'a' && userChoices.question3 === 'a' && userChoices.question4 === 'b' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+        resultImageSrc  = '../webimg/test/Frole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'a' && userChoices.question3 === 'a' && userChoices.question4 === 'b' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+        resultImageSrc  = '../webimg/test/Frole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'a' && userChoices.question3 === 'b' && userChoices.question4 === 'a' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'a' && userChoices.question3 === 'b' && userChoices.question4 === 'a' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+        resultImageSrc  = '../webimg/test/Brole.png';
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'a' && userChoices.question3 === 'b' && userChoices.question4 === 'b' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+        resultImageSrc  = '../webimg/test/Brole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'a' && userChoices.question3 === 'b' && userChoices.question4 === 'b' && userChoices.question5 === 'b') {
-         resultImageSrc  = '../webimg/newloadppp/Frole.svg';
+         resultImageSrc  = '../webimg/test/Frole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'a' && userChoices.question4 === 'a' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Srole.svg';
+        resultImageSrc  = '../webimg/test/Srole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'a' && userChoices.question4 === 'b' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'a' && userChoices.question4 === 'b' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+        resultImageSrc  = '../webimg/test/Brole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'a' && userChoices.question4 === 'a' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'b' && userChoices.question4 === 'a' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'b' && userChoices.question4 === 'a' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Srole.svg';
+        resultImageSrc  = '../webimg/test/Srole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'b' && userChoices.question4 === 'b' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'b' && userChoices.question4 === 'b' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Brole.svg';
+        resultImageSrc  = '../webimg/test/Brole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'a' && userChoices.question4 === 'c' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Srole.svg';
+        resultImageSrc  = '../webimg/test/Srole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'a' && userChoices.question4 === 'c' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'b' && userChoices.question4 === 'c' && userChoices.question5 === 'a') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
 
       }else if (userChoices.question1 === 'b' && userChoices.question2 === 'b' && userChoices.question3 === 'b' && userChoices.question4 === 'c' && userChoices.question5 === 'b') {
-        resultImageSrc  = '../webimg/newloadppp/Arole.svg';
+        resultImageSrc  = '../webimg/test/Arole.png';
 
       }
 
