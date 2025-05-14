@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Noto Sans JP", serif;
+  /* font: normal 100% Helvetica; */
+}
+
+/* 滾動條樣式################################## */
+/* 整個滾動條 */
+::-webkit-scrollbar {
+  width: 4px; /* 滾動條的寬度 */
+  height: 4px; /* 滾動條的高度 */
+}
+
+/* 滾動條的背景 */
+::-webkit-scrollbar-track {
+  background: rgba(69, 54, 46, 1);
+  /* border-radius: 50px;  */
+  /* 圆角 */
+}
+
+/* 滾動條的滑塊 */
+::-webkit-scrollbar-thumb {
+  background: #BC3E1E; /* 滑塊顏色 */
+  border-radius: 50px; /* 圆角 */
+}
+
+/* 滑塊在懸停時的顏色 */
+::-webkit-scrollbar-thumb:hover {
+  background: #b9cdcd; /* 懸停時的顏色 */
+}
+
+/* 滾動條的邊距 */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1; /* 角落的顏色 */
+}
+
+/* navbar --------------------------- */
+.header {
+  padding: 0px;
+  background-color: #f0efe6;
+  width: 100%;
+  height: 60px;
+  /*   display:flex; */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+}
+.logo {
+  /* border: #79b95a 2px solid; */
+  padding:8px 4px;
+}
+.logo img {
+  height: 50px;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 14px;
+}
+nav .g:hover {
+  background-color: #79b95a;
+  color: #f0efe6;
+}
+nav .o:hover {
+  background-color: #BC3E1E;
+  color: #f0efe6;
+}
+/* ######################電腦版導覽列####################### */
+@media screen and (min-width: 768px) {
+  #menu-control, .menu-btn {
+    display: none;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav {
+    /*     margin:-10px 0; */
+    position: relative;
+    left: 0;
+    display: flex !important;
+    height: auto;
+    width: auto;
+    padding: 0 40px;
+  }
+  nav a {
+    padding: 0px 16px;
+    color: #3c4040;
+    line-height: 60px;
+  }
+  nav a:hover {
+    text-decoration: none;
+  }
+}
+/* ######################手機版導覽列####################### */
+@media screen and (max-width: 767.5px) {
+  #menu-control {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    /*   z-index:3; */
+  }
+  nav {
+    box-sizing: border-box;
+    width: 200px;
+    height: calc(100vh - 40px);
+    background-color: #f0efe6;
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    padding: 40px 0px;
+    transition: 0.5s;
+    opacity: 95%;
+  }
+  nav a {
+    line-height: 3.2;
+    padding: 0px 40px;
+    color: #3c4040;
+    /*     border-bottom: #79B95A 2px solid; */
+  }
+  nav a:hover {
+    text-decoration: none;
+  }
+  .logo img {
+    height: 45px !important;
+  }
+  .menu-btn {
+    /*   background-color: #0f0; */
+    width: 30px;
+    height: 30px;
+    margin: 0px 15px;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  /* 漢堡橫條 偽元素 */
+  .menu-btn::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background-color: #3c4040;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 5px 10px 0px #000;
+  }
+  .menu-btn span {
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+  }
+  /* 按鈕控制 */
+  #menu-control:checked~.header nav {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navbar-menu {
+    float: none;
+    display: none;
+  }
+  .navbar-menu.active {
+    display: block;
+  }
+  .navbar-menu > li {
+    display: block;
+  }
+  .button-toggle {
+    display: inline-block;
+  }
+}
+
+
+
+/* 預設隱藏所有市場內容 */
+.market-content {
+    display: none;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
+  
+  /* 顯示當前選中的市場內容 */
+  .market-content.active {
+    display: block;
+  }
+  
+/* 各市場的背景圖片 */
+#content-morning-market {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #content-evening-market {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+#content-morning-market.active,
+#content-evening-market.active {
+  display: block;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+#content-morning-market .road-background {
+    position: relative;
+    width: 100%;
+    padding-top: 94%; /* 根據背景圖實際高寬比調整，例如1.4表示高度為寬度的0.94倍 */
+    background-image: url(../webimg/farmer/farmbg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #content-evening-market .road-background {
+    position: relative;
+    width: 100%;
+    padding-top: 94%; /* 根據背景圖實際高寬比調整，例如1.4表示高度為寬度的0.94倍 */
+    background-image: url(../webimg/farmer/farmevnbg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .road-element {
+    position: absolute;
+    width: 28%; /* 可依需要調整 */
+    animation: swing 1s ease-in-out infinite alternate;
+    cursor: pointer;
+  }
+
+  @keyframes swing {
+    0% { transform: rotate(1deg); }
+    /* 50% { transform: rotate(0deg); } */
+    100% { transform: rotate(-1deg); }
+}
+
+.road-element:hover {
+    animation: none; 
+    transform: scale(1.05);/* 滑鼠懸停時微微放大 */
+
+}
+  /* ------早市按鈕------ */
+  .button1 {
+    top: 60%;
+    left: 25%;
+  }
+  .button2 {
+    top: 12%;
+    left: 10%;
+  }
+  .button3 {
+    top: 10%;
+    left: 60%;
+  }
+  
+  .road-element img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+/* ------黃昏市場按鈕------ */
+    .button1e {
+      top: 54%;
+      left: 23%;
+    }
+
+    .button2e {
+      top: 8%;
+      left: 8%;
+    }
+
+    .button3e {
+      top: 15%;
+      left: 56%;
+    }
+
+
+
+    .button4e {
+      top: 64%;
+      left: 65%;
+    }
+
+
+/* 修改背景顏色 */
+.modal {
+    display: none; /* 初始隐藏 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 背景透明黑 */
+  font-family: 'Noto Sans TC', sans-serif;
+  }
+
+/* 黑色上方區域和關閉按鈕 */
+.modal-header {
+  background-color: #FCF9F9;
+  height: 48px;
+  width: 100%; /* 讓黑色長條寬度為整個視窗 */
+  position: absolute; /* 固定在視窗最上方 */
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top-left-radius: 10px; /* 圓角邊框 */
+  border-top-right-radius: 10px; /* 圓角邊框 */
+}
+
+.close {
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #FCF9F9;
+  padding: 8px 16px;
+}
+
+.close:hover,
+.close:focus {
+  color: #FCF9F9;
+  background-color: #BC3E1E;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.modal-content {
+  background-color: #b9cdcdce;
+  padding: 60px 20px 20px;
+  width: 60%;
+  height: 70%;
+  display: flex;
+  border-radius: 10px;
+  position: fixed; /* 改成 fixed */
+  top: 54%;         /* 定位到畫面中間 */
+  left: 50%;
+  transform: translate(-50%, -50%); /* 真正置中 */
+  overflow: hidden;
+  z-index: 1000; /* 若有需要蓋住其他內容 */
+}
+
+
+
+/* ++++++++++++++++++++左側攤販資訊++++++++++++++++++++ */
+.modal-left {
+  width: 20%;
+  padding: 20px;
+  background-color: #FCF9F9; /* 白色背景區分主背景 */
+  border-radius: 10px;
+}
+
+.vendor-image {
+  /* border: #5ab6b9 2px solid; */
+  display: block; /* 設定為區塊元素 */
+  width: 100%;
+  height: auto;
+  margin: 0 auto; /* 上下 margin 為 0，左右自動置中 */
+}
+
+
+#vendor-name {
+  /* border: #79b95a 2px solid; */
+    text-align: center;
+    font-size:18px;
+}
+
+
+/* ######傍晚樣式改變####################################################### */
+/* ===?=== */
+#vendor-name-evening {
+    text-align: center;
+    font-size:18px;
+}
+
+#modal-evening .modal-header {
+  background-color: #262223;
+  height: 48px;
+  width: 100%; /* 讓黑色長條寬度為整個視窗 */
+  position: absolute; /* 固定在視窗最上方 */
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top-left-radius: 10px; /* 圓角邊框 */
+  border-top-right-radius: 10px; /* 圓角邊框 */
+}
+
+#modal-evening .close {
+  color: #FCF9F9;
+  background-color: #262223;
+}
+
+#modal-evening .close:hover,
+.close:focus {
+  color: #FCF9F9;
+  background-color: #BC3E1E;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+#modal-evening .modal-content {
+  background-color: #1f333dc5;
+  padding: 60px 20px 20px;
+  width: 60%;
+  height: 70%;
+  display: flex;
+  border-radius: 10px;
+  position: fixed; /* 改成 fixed */
+  top: 54%;         /* 定位到畫面中間 */
+  left: 50%;
+  transform: translate(-50%, -50%); /* 真正置中 */
+  overflow: hidden;
+  z-index: 1000; /* 若有需要蓋住其他內容 */
+}
+
+#modal-evening .modal-left{
+  background-color: #262223;
+  
+}
+
+#modal-evening .modal-left p{
+  color: #FCF9F9;
+  
+}
+
+#modal-evening .modal-right{
+  background-color: #262223;
+}
+
+#modal-evening h3{
+  color: #FCF9F9;
+}
+
+#modal-evening .modal-right ul{
+  color: #FCF9F9;
+}
+
+#modal-evening .sender .chat-bubble {
+  background-color: #262223; /* 發送者的泡泡顏色 */
+  color: #FCF9F9;
+  position: relative;
+  margin-left: 0px;
+}
+/* ############################################################################# */
+
+
+.left-mes p{
+  /* border: #b95aa9 2px solid; */
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+}
+
+.tag {
+  background-color: #BC3E1E;
+  color: #FCF9F9;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  padding: 4px 16px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-top: 12px; /* 調整 margin-top，減少與上一元素的距離 */
+  margin-bottom: 4px; /* 增加 margin-bottom，控制與下一元素的距離 */
+}
+
+
+/* +++++++++++++++++中間聊天室+++++++++++++++++++++++++ */
+.modal-center {
+  border: 2px solid #F0EFE6;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.50);
+  border-radius: 10px;
+  width: 65%;
+  margin: 0 20px;
+  padding: 20px;
+  overflow: hidden; /* 防止中间部分撑大 */
+}
+
+#chat-container-morning, #chat-container-evening {
+  /* border: #742525 2px solid; */
+  padding: 10px;
+  height: 80%; /* 固定聊天内容高度 */
+  overflow-y: auto; /* 启用垂直滚动 */
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* 自定義滾動條 */
+#chat-container-morning::-webkit-scrollbar,
+#chat-container-evening::-webkit-scrollbar {
+  width: 6px; /* 滾動條的寬度 */
+}
+
+/* 滾動條的背景 */
+#chat-container-morning::-webkit-scrollbar-track,
+#chat-container-evening::-webkit-scrollbar-track {
+  background: #2c2c2c; /* 滾動條背景顏色 */
+  border-radius: 4px; /* 滾動條圓角 */
+}
+
+/* 滾動條的滑塊 */
+#chat-container-morning::-webkit-scrollbar-thumb,
+#chat-container-evening::-webkit-scrollbar-thumb {
+  background: #FCF9F9; /* 滾動條顏色 */
+  border-radius: 4px; /* 滾動條圓角 */
+}
+
+/* 滾動條的滑塊在懸停時的顏色 */
+#chat-container-morning::-webkit-scrollbar-thumb:hover,
+#chat-container-evening::-webkit-scrollbar-thumb:hover {
+  background: #dadada; /* 懸停時的顏色 */
+}
+
+
+h3 {
+  letter-spacing: 1.2px;
+}
+
+.chat-message {
+  display: flex;
+  align-items: flex-end;
+  font-size:14px;
+}
+
+.chat-bubble {
+  background-color: #FCF9F9;
+  color: #474c55;
+  letter-spacing: 1.2px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  max-width: 45%;
+}
+
+.sender .chat-bubble {
+  background-color: #FCF9F9; /* 發送者的泡泡顏色 */
+  position: relative;
+  margin-left: 0px;
+}
+
+.receiver .chat-bubble {
+  background-color: #d7f135; /* 接收者的泡泡顏色 */
+  position: relative;
+  margin-left: auto; /* 自动调整左侧距离 */
+  margin-right: 0; /* 确保右侧没有多余的空间 */
+  float: right; /* 使气泡靠右对齐 */
+  clear: both; /* 清除浮动影响，确保每个气泡在新行上 */
+}
+
+/* ========?============ */
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 5px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* 右側好友列表 */
+.modal-right {
+  width: 15%;
+  padding: 20px;
+  background-color: #FCF9F9; /* 白色背景區分主背景 */
+  border-radius: 10px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+h3 {
+  margin-bottom: 20px; /* 增加標題下方距離 */
+}
+
+.friends-list {
+  list-style: none;
+  padding: 0;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.friend-item img {
+  max-width: 60px; /* 最大寬度 */
+  max-height: 60px; /* 最大高度 */
+  margin-right: 10px; /* 與右側元素的間距 */
+}
+
+.switch-toggle {
+  --width: 240px;
+  --height: 40px;
+  --offset: 0px;
+  --radius: 10px;
+
+  position: fixed;
+  top: 80px;
+  right: 100px;
+
+  width: var(--width);
+  height: var(--height);
+  padding: var(--offset);
+  background: #FCF9F9;
+  border-radius: var(--radius);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1;
+
+  input[type="checkbox"] {
+    cursor: pointer;
+    position: absolute;
+    inset: 0;
+    appearance: none;
+    z-index: 1;
+    
+    
+
+    &:checked {
+      + label.switch-toggle-label {
+        &:before {
+          translate: 100% 0; /* 移動到右側 */
+          border-top-left-radius: 0; /* 去掉左側圓角 */
+          border-bottom-left-radius: 0; /* 去掉左側圓角 */
+        }
+        span {
+          &:nth-child(1) {
+            color: #BC3E1E; /* 切換後第一個標籤的顏色 */
+          }
+          &:nth-child(2) {
+            color: #FCF9F9; /* 切換後第二個標籤的顏色 */
+          }
+        }
+      }
+    }
+
+    & + label.switch-toggle-label {
+      position: absolute;
+      inset: var(--offset, 0);
+      padding: 10px 0;
+      display: grid;
+      gap: 2px;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      place-items: center;
+      user-select: none;
+      pointer-events: none;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        inset: 0;
+        background: #BC3E1E;
+        border-radius: calc(var(--radius) - var(--offset)); /* 初始圓角設定 */
+        box-shadow: 0px 10px 20px 0px rgba(16, 39, 68, 0.1);
+        translate: 0 0;
+        transition: translate 250ms cubic-bezier(0.93, 0.26, 0.07, 0.69);
+      }
+
+      span {
+        position: relative;
+        transition: 200ms linear;
+
+        &:nth-child(1) {
+          color: #FCF9F9; /* 初始顏色 */
+        }
+
+        &:nth-child(2) {
+          color: #BC3E1E; /* 初始顏色 */
+        }
+      }
+    }
+  }
+}
+
+/* 左側開關時，右側的邊角變為直角 */
+input[type="checkbox"]:not(:checked) + label.switch-toggle-label:before {
+  border-top-right-radius: 0; /* 去掉右側的圓角 */
+  border-bottom-right-radius: 0; /* 去掉右側的圓角 */
+}
+
+/* 右側開關時，左側的邊角變為直角 */
+input[type="checkbox"]:checked + label.switch-toggle-label:before {
+  border-top-left-radius: 0; /* 去掉左側的圓角 */
+  border-bottom-left-radius: 0; /* 去掉左側的圓角 */
+}
+
+
+.hidden { display: none; }
+
+.market-content {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+.active {
+      display: block;
+    }
+
+.icon-box {
+  display: flex;
+  position: relative;
+  align-items: center; /* 垂直居中 */
+  margin-top: 16px; /* 與聊天室的距離 */
+  padding: 10px;
+  border-radius: 6px; /* 圓角 */
+  background-color: #FCF9F9; /* 背景顏色 */
+}
+
+.icons {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+}
+
+.icon1{
+  width: 20px; /* 圖標的寬度 */
+  height: 20px; /* 圖標的高度 */
+  margin: 0 0px; /* 圖標間距 */
+}
+
+.icon2 {
+  width: 15px; /* 圖標的寬度 */
+  height: 15px; /* 圖標的高度 */
+  margin: 0 5px; /* 圖標間距 */
+}
+
+.icon3 {
+  position: absolute; /* 絕對定位 */
+  right: 10px; /* 距離容器右邊的距離 */
+  width: 20px; /* 圖標的寬度 */
+  height: 20px; /* 圖標的高度 */
+}
+
+.divider {
+  width: 2px; /* 槓槓的寬度 */
+  height: 15px; /* 槓槓的高度 */
+  margin: 5px 5px; /* 圖標間距 */
+  background-color: #888; /* 槓槓顏色 */
+}
+  
+#dynamic-message {
+  font-size: 14px; /* 字體大小 */
+  color: #333; /* 文字顏色 */
+  white-space: nowrap; /* 不換行 */
+  margin: 0 10px; /* 與槓槓的距離 */
+}

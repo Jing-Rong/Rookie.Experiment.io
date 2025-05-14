@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>農情味 - 菜鳥食驗嘉</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+  
+<body>
+   
+  <!-- !###########導覽列###########  -->
+ <!-- checkbox控制按鈕 + nav bar -->
+    <input type="checkbox" id="menu-control" />
+    <div class="header">
+      <h1 class="logo">
+        <img src="https://i.imgur.com/uwlq9hJ.png" alt="logo" />
+      </h1>
+      <nav>
+        <a class="g" href="https://cosmozhan.github.io/GraduationPJ/homepage-gp/dist/index.html">食驗事</a>
+        <a class="o" href="https://ting1103828.github.io/farmers/dist/index.html">農情味</a>
+        <a class="g" href="https://cosmozhan.github.io/GraduationPJ/recipechoice-gp/dist/index.html#">呷·嘉常菜</a>
+        <a class="o" href="https://jing-rong.github.io/Rookie.Experiment.io/Tourism/html/sec7-choose.html">義遊味盡</a>
+      </nav>
+      <!--     漢堡選單 -->
+      <label for="menu-control" class="menu-btn">
+        <span>遠端操控選單</span>
+      </label>
+    </div>
+  
+    <!-- -----------開關切換------------- -->
+  <div class="switch-toggle">
+    <input class="switch-toggle-checkbox" type="checkbox" id="pricing-plan-switch" />
+    <label class="switch-toggle-label" for="pricing-plan-switch">
+        <span>早市</span>
+        <span>江厝店黃昏市場</span>
+    </label>
+  </div>
+
+  
+<div id="content-morning-market" class="market-content">
+  <div id="vendor1" class="road-element morning-style button1" data-info="morning-vendor1"></div>
+  <div id="vendor2" class="road-element morning-style button2" data-info="morning-vendor2"></div>
+  <div id="vendor3" class="road-element morning-style button3" data-info="morning-vendor3"></div>
+</div>
+
+    <div id="modal-morning" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-left info-box">
+          <div class="left-mes">
+            <img id="vendor-image" src="" alt="圖片" class="vendor-image"><br><br>
+            <p id="vendor-name">○○○攤販</p><br>
+            <div class="tag">熱賣商品</div>
+            <p id="vendor-product">小番茄</p>
+            <div class="tag">價格</div>
+            <p id="vendor-price">$30 / 1台斤</p>
+            <div class="tag">上線時間</div>
+            <p id="vendor-time">每天14:00 ~ 16:00</p>
+            <div class="tag">攤販地點</div>
+            <p id="vendor-location">民雄166縣道與工業二路的交叉路口</p>
+              </div>
+        </div>
+
+        <div class="modal-center">
+          <h4>聊天室</h4>
+          <div id="chat-container-morning"></div>
+          <div class="icon-box">
+  <div class="icons">
+    <img src="https://i.imgur.com/VKULmpJ.png" alt="Icon 1" class="icon icon1">
+    <img src="https://i.imgur.com/Ii1MJs5.png" alt="Icon 2" class="icon icon2">
+    <div class="divider"></div>
+    <p id="dynamic-message">這是默認消息</p>
+    <img src="https://i.imgur.com/SSOEvI1.png" alt="Icon 3" class="icon icon3">
+  </div>
+</div>
+
+        </div>
+
+        <div class="modal-right info-box">
+          <h4>共同好友</h4><p></p>
+          <ul id="friends-list-morning" class="friends-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+
+  <!-- ----------黃昏-------------- -->
+  <div id="content-evening-market" class="market-content">
+    <div id="road-container">
+      <div class="road-element morning-style button1" data-info="morning-vendor1" id="vendor1"></div>
+      <div class="road-element evening-style button2" data-info="evening-vendor2">
+        <img src="../webimg/farmer/stand1.svg" alt="攤販2">
+      </div>
+      <div class="road-element evening-style button3e" data-info="evening-vendor3">
+        <img src="https://i.imgur.com/BRuXNsz.png" alt="攤販3">
+      </div>
+      <div class="road-element evening-style button4e" data-info="evening-vendor4">
+        <img src="https://i.imgur.com/WaYNgB2.png" alt="攤販4">
+      </div>
+    </div>
+
+    <div id="modal-evening" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-left info-box">
+          <div class="left-mes">
+            <img id="vendor-image-evening" src="" alt="圖片" class="vendor-image"><br><br>
+            <p id="vendor-name-evening">○○○攤販</p><br>
+            <div class="tag">熱賣商品</div>
+            <p id="vendor-product-evening">小番茄</p>
+            <div class="tag">價格</div>
+            <p id="vendor-price-evening">$30 / 1台斤</p>
+            <div class="tag">上線時間</div>
+            <p id="vendor-time-evening">每天14:00 ~ 16:00</p>
+            <div class="tag">攤販地點</div>
+            <p id="vendor-location-evening">民雄166縣道與工業二路的交叉路口</p>
+              </div>
+        </div>
+
+        <div class="modal-center">
+          <h4>聊天室</h4>
+          <div id="chat-container-evening"></div>
+          <div class="icon-box">
+            <div class="icons">
+              <img src="https://i.imgur.com/VKULmpJ.png" alt="Icon 1" class="icon icon1">
+              <img src="https://i.imgur.com/Ii1MJs5.png" alt="Icon 2" class="icon icon2">
+            <div class="divider"></div>
+     <p id="dynamic-message">好!謝謝阿姨~</p>
+    <img src="https://i.imgur.com/SSOEvI1.png" alt="Icon 3" class="icon icon3">
+  </div>
+</div>
+
+        </div>
+
+        <div class="modal-right info-box">
+          <h4>共同好友</h4>
+          <ul id="friends-list-evening" class="friends-list"></ul><br>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+</body>
+<script src="script.js"></script>
+</html>
