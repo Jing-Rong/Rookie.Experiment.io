@@ -726,7 +726,7 @@ input[type="checkbox"]:checked + label.switch-toggle-label:before {
   display: flex;
   position: relative;
   align-items: center; /* 垂直居中 */
-  margin-top: -20px; /* 與聊天室的距離 */
+  margin-top: 0px; /* 與聊天室的距離 */
   padding: 10px;
   border-radius: 6px; /* 圓角 */
   background-color: #FCF9F9; /* 背景顏色 */
