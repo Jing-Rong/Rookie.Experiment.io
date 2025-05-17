@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
           { sender: 'sender', text: '那你再看看，需要什麼在跟我說～' }
         ],
         friends: [
-          { name: '紅蘿蔔攤販', image: '../webimg/farmer/v2.svg' },
-          { name: '紅心芭樂攤販', image: '../webimg/farmer/v3.svg' }
+          { name: '紅蘿蔔攤販', image: '../webimg/farmer/v2.svg' , id:"morning-vendor2"},
+          { name: '紅心芭樂攤販', image: '../webimg/farmer/v3.svg', id:"morning-vendor3"}
         ]
       },
       'morning-vendor2': {
@@ -131,8 +131,8 @@ document.addEventListener("DOMContentLoaded", function () {
           { sender: 'sender', text: '當然可以！吃多少買多少，看你需要多少，可以自己抓一下份量'},
         ],
         friends: [
-          { name: '萵苣攤販', image: '../webimg/farmer/v1.svg' },
-          { name: '紅心芭樂攤販', image: '../webimg/farmer/v3.svg' }
+          { name: '萵苣攤販', image: '../webimg/farmer/v1.svg' , id:"morning-vendor1" },
+          { name: '紅心芭樂攤販', image: '../webimg/farmer/v3.svg', id:"morning-vendor3" }
         ]
       },'morning-vendor3': {
         name: '紅心芭樂攤販',
@@ -151,8 +151,8 @@ document.addEventListener("DOMContentLoaded", function () {
           { sender: 'sender', text: '對呀～那你看看有沒有需要什麼'},
         ],
         friends: [
-          { name: '萵苣攤販', image: '../webimg/farmer/v1.svg' },
-          { name: '紅蘿蔔攤販', image: '../webimg/farmer/v2.svg' }
+          { name: '萵苣攤販', image: '../webimg/farmer/v1.svg' , id:"morning-vendor1"},
+          { name: '紅蘿蔔攤販', image: '../webimg/farmer/v2.svg' , id:"morning-vendor2"}
         ]
       },'evening-vendor1': {
         name: '小番茄攤販',
@@ -170,9 +170,9 @@ document.addEventListener("DOMContentLoaded", function () {
           { sender: 'sender', text: '沒關係!這邊有散裝的!可以秤重，看你想買多少都可以~' }
         ],
         friends: [
-          { name: '龍鬚菜攤販', image: '../webimg/farmer/ve2.png' },
-          { name: '蓮藕攤販', image: '../webimg/farmer/ve3.png' },
-          { name: '鳳梨攤販', image: '../webimg/farmer/ve4.png' }
+          { name: '龍鬚菜攤販', image: '../webimg/farmer/ve2.png',id:"evening-vendor12" },
+          { name: '蓮藕攤販', image: '../webimg/farmer/ve3.png',id:"evening-vendor3" },
+          { name: '鳳梨攤販', image: '../webimg/farmer/ve4.png',id:"evening-vendor4" }
         ]
       },'evening-vendor2': {
         name: '龍鬚菜攤販',
@@ -274,6 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
         info.friends.forEach(friend => {
           const friendItem = document.createElement('li');
           friendItem.className = 'friend-item';
+           friendItem.setAttribute('data-info', friend.id); // 加上這一行
           friendItem.innerHTML = `<img src="${friend.image}" alt="好友頭像"><span>${friend.name}</span>`;
           friendsList.appendChild(friendItem);
         });
@@ -361,3 +362,98 @@ buttons.forEach(button => {
     }
   });
 });
+
+// ------------------
+
+// 讓共同好友清單中的項目可以被點擊並打開對應的攤販資料
+document.addEventListener('click', function (e) {
+  const friendItem = e.target.closest('.friend-item');
+  if (friendItem && friendItem.dataset.info) {
+    const info = vendorData[friendItem.dataset.info];
+    if (!info) {
+      console.error('找不到資料 for 好友:', friendItem.dataset.info);
+      return;
+    }
+
+    // 填入攤販資料（以 morning 為例）
+    document.getElementById('vendor-name').innerText = info.name;
+    document.getElementById('vendor-product').innerText = info.product;
+    document.getElementById('vendor-price').innerText = info.price;
+    document.getElementById('vendor-time').innerText = info.time;
+    document.getElementById('vendor-location').innerText = info.location;
+    document.getElementById('vendor-image').src = info.image;
+
+    // 更新聊天室
+    const chatContainer = document.getElementById('chat-container-morning');
+    chatContainer.innerHTML = '';
+    info.chat.forEach(message => {
+      const messageElement = document.createElement('div');
+      messageElement.className = `chat-message ${message.sender}`;
+      messageElement.innerHTML = `<div class="chat-bubble">${message.text}</div>`;
+      chatContainer.appendChild(messageElement);
+    });
+
+    // 更新共同好友
+    const friendsList = document.getElementById('friends-list-morning');
+    friendsList.innerHTML = '';
+    info.friends.forEach(friend => {
+      const friendItem = document.createElement('li');
+      friendItem.className = 'friend-item';
+      friendItem.setAttribute('data-info', friend.id); // 再設定一次 data-info
+      friendItem.innerHTML = `<img src="${friend.image}" alt="好友頭像"><span>${friend.name}</span>`;
+      friendsList.appendChild(friendItem);
+    });
+
+    // 顯示模態框
+    modalMorning.style.display = 'block';
+  }
+});
+
+// -----------------------------
+// 讓共同好友清單中的項目可以被點擊並打開對應的攤販資料
+document.addEventListener('click', function (e) {
+  const friendItem = e.target.closest('.friend-item');
+  if (friendItem && friendItem.dataset.info) {
+    const info = vendorData[friendItem.dataset.info];
+    if (!info) {
+      console.error('找不到資料 for 好友:', friendItem.dataset.info);
+      return;
+    }
+
+    // 填入攤販資料（以 morning 為例）
+    document.getElementById('vendor-name-evening').innerText = info.name;
+    document.getElementById('vendor-product-evening').innerText = info.product;
+    document.getElementById('vendor-price-evening').innerText = info.price;
+    document.getElementById('vendor-time-evening').innerText = info.time;
+    document.getElementById('vendor-location-evening').innerText = info.location;
+    document.getElementById('vendor-image-evening').src = info.image;
+
+
+
+ // 更新聊天室
+    const chatContainer = document.getElementById('chat-container-evening');
+    chatContainer.innerHTML = '';
+    info.chat.forEach(message => {
+      const messageElement = document.createElement('div');
+      messageElement.className = `chat-message ${message.sender}`;
+      messageElement.innerHTML = `<div class="chat-bubble">${message.text}</div>`;
+      chatContainer.appendChild(messageElement);
+    });
+
+    // 更新共同好友
+    const friendsList = document.getElementById('friends-list-evening');
+    friendsList.innerHTML = '';
+    info.friends.forEach(friend => {
+      const friendItem = document.createElement('li');
+      friendItem.className = 'friend-item';
+      friendItem.setAttribute('data-info', friend.id); // 再設定一次 data-info
+      friendItem.innerHTML = `<img src="${friend.image}" alt="好友頭像"><span>${friend.name}</span>`;
+      friendsList.appendChild(friendItem);
+    });
+
+    // 顯示模態框
+    modalEvening.style.display = 'block';
+  }
+
+    });
+  
